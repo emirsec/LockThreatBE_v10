@@ -12,6 +12,19 @@ using Lockthreat.MultiTenancy.Accounting;
 using Lockthreat.MultiTenancy.Payments;
 using Lockthreat.Storage;
 using Lockthreat.OrganizationSetups;
+using Lockthreat.Activitys;
+using Lockthreat.BusinessEntities;
+using Lockthreat.Vendors;
+using Lockthreat.ApplicationConfigurations;
+using Lockthreat.Employees;
+using Lockthreat.Contacts;
+using Lockthreat.CyberAwarenessScores;
+using Lockthreat.ControlStandards;
+using Lockthreat.AuthoratativeDocuments;
+using Lockthreat.CodeGenerators;
+using Lockthreat.Incidents;
+using Lockthreat.Pages;
+using Lockthreat.Questions;
 
 namespace Lockthreat.EntityFrameworkCore
 {
@@ -20,6 +33,41 @@ namespace Lockthreat.EntityFrameworkCore
         /* Define an IDbSet for each entity of the application */
 
         public virtual DbSet<LockThreatOrganization> LockThreatOrganizations { get; set; }
+        public virtual DbSet<Activity> Activitys { get; set; }
+        public virtual DbSet<ActivityStep> ActivitySteps { get; set; }
+
+        public virtual DbSet<BusinessUnit> BusinessUnits { get; set; }
+
+        public virtual DbSet<Vendor> Vendors { get; set; }
+        public virtual DbSet<VendorProductService> VendorProductServices { get; set; }
+
+        public virtual DbSet<ApplicationConfiguration> ApplicationConfigurations { get; set; }
+
+        public virtual DbSet<Employee> Employees { get; set; }
+
+        public virtual DbSet<Contact> Contacts { get; set; }
+        public virtual DbSet<CyberAwarenessScore> CyberAwarenessScores { get; set; }
+
+        public virtual DbSet<ControlStandard> ControlStandards { get; set; }
+
+        public virtual DbSet<AuthoratativeDocument> AuthoratativeDocuments { get; set; }
+
+        public virtual DbSet<CodeGenerator> CodeGenerators { get; set; }
+
+        public virtual DbSet<Incident> Incidents { get; set; }
+
+        public virtual DbSet<Page> Pages { get; set; }
+        public virtual DbSet<Question> Questions { get; set; }
+
+
+
+
+
+
+
+
+
+
 
 
         public virtual DbSet<BinaryObject> BinaryObjects { get; set; }
