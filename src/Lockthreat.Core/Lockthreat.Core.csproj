@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <Import Project="..\..\common.props"></Import>
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -39,6 +39,8 @@
     <ProjectReference Include="..\Lockthreat.Core.Shared\Lockthreat.Core.Shared.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Citations\" />
     <Folder Include="ControlProcedures\" />
+    <Folder Include="Templates\" />
   </ItemGroup>
 </Project>

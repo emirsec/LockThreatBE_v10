@@ -25,6 +25,11 @@ using Lockthreat.CodeGenerators;
 using Lockthreat.Incidents;
 using Lockthreat.Pages;
 using Lockthreat.Questions;
+using Lockthreat.RiskManagements;
+using Lockthreat.PolicyManagers;
+using Lockthreat.Citations;
+using Lockthreat.ReviewAssessments;
+using Lockthreat.StrategicObjectives;
 
 namespace Lockthreat.EntityFrameworkCore
 {
@@ -35,31 +40,29 @@ namespace Lockthreat.EntityFrameworkCore
         public virtual DbSet<LockThreatOrganization> LockThreatOrganizations { get; set; }
         public virtual DbSet<Activity> Activitys { get; set; }
         public virtual DbSet<ActivityStep> ActivitySteps { get; set; }
-
         public virtual DbSet<BusinessUnit> BusinessUnits { get; set; }
-
         public virtual DbSet<Vendor> Vendors { get; set; }
         public virtual DbSet<VendorProductService> VendorProductServices { get; set; }
-
         public virtual DbSet<ApplicationConfiguration> ApplicationConfigurations { get; set; }
-
         public virtual DbSet<Employee> Employees { get; set; }
-
         public virtual DbSet<Contact> Contacts { get; set; }
         public virtual DbSet<CyberAwarenessScore> CyberAwarenessScores { get; set; }
-
         public virtual DbSet<ControlStandard> ControlStandards { get; set; }
-
         public virtual DbSet<AuthoratativeDocument> AuthoratativeDocuments { get; set; }
-
         public virtual DbSet<CodeGenerator> CodeGenerators { get; set; }
-
         public virtual DbSet<Incident> Incidents { get; set; }
-
         public virtual DbSet<Page> Pages { get; set; }
         public virtual DbSet<Question> Questions { get; set; }
 
 
+        public virtual DbSet<ActivityAction> ActivityActions { get; set; }
+        public virtual DbSet<RiskManagement> RiskManagements { get; set; }
+        public virtual DbSet<PageField> PageFields { get; set; }
+        public virtual DbSet<State> States { get; set; }
+        public virtual DbSet<PolicyManager> PolicyManagers { get; set; }
+        public virtual DbSet<Citation> Citations { get; set; }
+        public virtual DbSet<ReviewAssessment> ReviewAssessments { get; set; }
+        public virtual DbSet<StrategicObjective> StrategicObjectives { get; set; }
 
 
 
