@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.BusinessProcesses;
 using Lockthreat.Employees;
 
@@ -30,10 +30,10 @@ namespace Lockthreat.Contracts
         public int? ContractValue { get; set; }
 
         public int? ContractTypeId  { get; set; }
-        public DynamicParameterValue ContractType { get; set; }
+        public DynamicPropertyValue ContractType { get; set; }
 
         public int? ContractCategoryId  { get; set; }
-        public DynamicParameterValue ContractCategory { get; set; }
+        public DynamicPropertyValue ContractCategory { get; set; }
 
         public long? VendorId { get; set; }
         public Vendor Vendor { get; set; }

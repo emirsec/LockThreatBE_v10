@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Lockthreat.DynamicEntityParameters.Dto
+namespace Lockthreat.DynamicEntityProperties.Dto
 {
     public class DynamicNameValueDto
     {

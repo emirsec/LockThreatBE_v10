@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.BusinessEntities;
 using Lockthreat.Citations;
 using Lockthreat.Employees;
@@ -19,18 +19,18 @@ namespace Lockthreat.ControlProcedures
         public string ProcedureName { get; set; }
 
         public int? ControlProcedureTypeId  { get; set; }
-        public DynamicParameterValue ControlProcedureType { get; set; }
+        public DynamicPropertyValue ControlProcedureType { get; set; }
 
         public int? OperationalFrequencyId  { get; set; }
-        public DynamicParameterValue OperationalFrequency { get; set; }
+        public DynamicPropertyValue OperationalFrequency { get; set; }
 
         public int? ActivityCycleId  { get; set; }
-        public DynamicParameterValue ActivityCycle  { get; set; }
+        public DynamicPropertyValue ActivityCycle  { get; set; }
 
         public string Description { get; set; }
 
         public int? ProcedureCategoryId  { get; set; }
-        public DynamicParameterValue ProcedureCategory  { get; set; }
+        public DynamicPropertyValue ProcedureCategory  { get; set; }
 
         public long? BusinessUnitId { get; set; }
         public BusinessUnit BusinessUnit { get; set; }
@@ -42,7 +42,7 @@ namespace Lockthreat.ControlProcedures
         public Employee ProcedureOwner { get; set; }
 
         public int? TestTypeId  { get; set; }
-        public DynamicParameterValue TestType  { get; set; }
+        public DynamicPropertyValue TestType  { get; set; }
 
         public long? TesterId  { get; set; }
         public Employee Tester { get; set; }

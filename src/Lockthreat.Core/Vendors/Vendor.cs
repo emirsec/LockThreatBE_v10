@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -44,19 +44,19 @@ namespace Lockthreat.Vendors
         public int? PostalCode { get; set; }
 
         public int? CountryId  { get; set; }
-        public DynamicParameterValue Country { get; set; }
+        public DynamicPropertyValue Country { get; set; }
 
         public int? VendorTypeId { get; set; }
-        public DynamicParameterValue VendorType  { get; set; }
+        public DynamicPropertyValue VendorType  { get; set; }
 
         public int? IndustryId  { get; set; }
-        public DynamicParameterValue Industry { get; set; }
+        public DynamicPropertyValue Industry { get; set; }
 
         public int? VendorCriticalRatingId  { get; set; }
-        public DynamicParameterValue VendorCriticalRating  { get; set; }
+        public DynamicPropertyValue VendorCriticalRating  { get; set; }
 
         public int? VendorInitialRatingId { get; set; }
-        public DynamicParameterValue VendorInitialRating  { get; set; }
+        public DynamicPropertyValue VendorInitialRating  { get; set; }
         public ICollection<VendorProductService> SelectedVendorProductServices { get; set; }
 
     }

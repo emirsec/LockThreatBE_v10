@@ -2,7 +2,7 @@
 using Lockthreat.AuthoratativeDocument.Dto;
 using Lockthreat.BusinessServices.Dto;
 using Lockthreat.Countries.Dto;
-using Lockthreat.DynamicEntityParameters.Dto;
+using Lockthreat.DynamicEntityProperties.Dto;
 using Lockthreat.GRCPrograms.Dto;
 using Lockthreat.OrganizationSetup.Dto;
 using System;

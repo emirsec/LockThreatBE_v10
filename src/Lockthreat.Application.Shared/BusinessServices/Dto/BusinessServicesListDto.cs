@@ -1,7 +1,7 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.Employee.Dto;
 using Lockthreat.OrganizationSetup.Dto;
 using System;
@@ -28,12 +28,12 @@ namespace Lockthreat.BusinessServices.Dto
         public long? BusinessUnitprimaryId { get; set; }
         public BusinessUnitPrimaryDto BusinessUnitprimary { get; set; }
         public int? ServiceTypeId { get; set; }
-        public DynamicParameterValue ServiceType { get; set; } 
+        public DynamicEntityProperty ServiceType { get; set; } 
         public int? ConfidentialityId { get; set; }
-        public DynamicParameterValue Confidentiality { get; set; } 
+        public DynamicEntityProperty Confidentiality { get; set; } 
         public int? IntergrityId { get; set; }
-        public DynamicParameterValue Intergrity { get; set; }
+        public DynamicEntityProperty Intergrity { get; set; }
         public int? AvailibilityId { get; set; }
-        public DynamicParameterValue Availibility { get; set; }
+        public DynamicEntityProperty Availibility { get; set; }
     }
 }

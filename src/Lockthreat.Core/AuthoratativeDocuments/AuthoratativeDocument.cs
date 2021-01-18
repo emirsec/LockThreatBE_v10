@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -23,11 +23,11 @@ namespace Lockthreat.AuthoratativeDocuments
 
         public int? MandateTypeId { get; set; }
 
-        public DynamicParameterValue MandateType { get; set; }
+        public DynamicPropertyValue MandateType { get; set; }
 
         public int? TypeId { get; set; }
 
-        public DynamicParameterValue Type { get; set; }
+        public DynamicPropertyValue Type { get; set; }
 
         public string Keyword { get; set; }
 

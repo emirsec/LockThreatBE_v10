@@ -1,7 +1,7 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.Authorization;
 using Abp.Domain.Repositories;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Abp.Linq.Extensions;
 using Abp.Organizations;
 using Abp.UI;
@@ -30,8 +30,8 @@ namespace Lockthreat.Business
         private readonly IRepository<BusinessUnit, long> _businessUnitRepository;
         private readonly IRepository<OrganizationUnit, long> _organizationUnitRepository;
         private readonly IRepository<LockThreatOrganization, long> _organizationSetupRepository;
-        private readonly IRepository<DynamicParameterValue> _DynamicParameterValueRepository;
-        private readonly IRepository<DynamicParameter> _dynamicParameterManager;
+        private readonly IRepository<DynamicPropertyValue> _DynamicParameterValueRepository;
+        private readonly IRepository<Abp.DynamicEntityProperties.DynamicProperty> _dynamicParameterManager;
         private readonly ICodeGeneratorCommonAppservice _codegeneratorRepository;
         private readonly IRepository<Employees.Employee, long> _employessRepository;
 
@@ -40,8 +40,8 @@ namespace Lockthreat.Business
             IOrganizationUnitAppService organizationUnitAppService,
             IRepository<OrganizationUnit, long> organizationUnitRepository,
             IRepository<LockThreatOrganization, long> organizationSetupRepository,
-            IRepository<DynamicParameterValue> DynamicParameterValueRepository,
-            IRepository<DynamicParameter> dynamicParameterManager,
+            IRepository<DynamicPropertyValue> DynamicParameterValueRepository,
+            IRepository<Abp.DynamicEntityProperties.DynamicProperty> dynamicParameterManager,
             ICodeGeneratorCommonAppservice codegeneratorRepository,
             IRepository<Employees.Employee, long> employessRepository
             )
@@ -278,11 +278,11 @@ namespace Lockthreat.Business
             var getUnitType = new List<UnitTypeDto>();
             try
             {
-                var getcheck = _dynamicParameterManager.GetAll().FirstOrDefault(x => x.ParameterName.ToLower().Trim() == "unit type");
+                var getcheck = _dynamicParameterManager.GetAll().FirstOrDefault(x => x.PropertyName.ToLower().Trim() == "unit type");
                 if(getcheck!=null)
                 {
                     getUnitType = await _DynamicParameterValueRepository.GetAll()
-                        .Where(l => l.DynamicParameterId == getcheck.Id)
+                        .Where(l => l.DynamicPropertyId == getcheck.Id)
                          .Select(x => new UnitTypeDto()
                          {
                              Id = x.Id,

@@ -1,5 +1,5 @@
 ﻿using Abp.Application.Services.Dto;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.BusinessServices.Dto;
 using Lockthreat.OrganizationSetup.Dto;
 using System;
@@ -22,17 +22,17 @@ namespace Lockthreat.AssetInformations.Dto
         public string PostalCode { get; set; }
 
         public int? CountryId { get; set; }
-        public DynamicParameterValue Country { get; set; }
+        public DynamicEntityProperty Country { get; set; }
 
         public int? AssetIdLV { get; set; }
 
         public int? AssetTypeId { get; set; }
-        public DynamicParameterValue AssetType { get; set; }
+        public DynamicEntityProperty AssetType { get; set; }
         public int? AssetCategoryId { get; set; }
-        public DynamicParameterValue AssetCategory { get; set; }
+        public DynamicEntityProperty AssetCategory { get; set; }
 
         public int? AssetLabelId { get; set; }
-        public DynamicParameterValue AssetLabel { get; set; }
+        public DynamicEntityProperty AssetLabel { get; set; }
 
         public long? LockThreatOrganizationId { get; set; }
         public GetOrganizationDto LockThreatOrganization { get; set; }
@@ -40,14 +40,14 @@ namespace Lockthreat.AssetInformations.Dto
         public BusinessServiceOwner Employee { get; set; }
 
         public int? ConfidentialityId { get; set; }
-        public DynamicParameterValue Confidentiality { get; set; }
+        public DynamicEntityProperty Confidentiality { get; set; }
 
         public int? AvailibilityId { get; set; }
-        public DynamicParameterValue Availibility { get; set; }
+        public DynamicEntityProperty Availibility { get; set; }
 
         public int? IntegrityId { get; set; }
-        public DynamicParameterValue Integrity { get; set; }
+        public DynamicEntityProperty Integrity { get; set; }
         public int? OtherId { get; set; }
-        public DynamicParameterValue Other { get; set; }
+        public DynamicEntityProperty Other { get; set; }
     }
 }

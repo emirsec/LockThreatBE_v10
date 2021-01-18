@@ -1,7 +1,7 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.IndustrySectors.Dto;
 using System;
 using System.Collections.Generic;
@@ -15,7 +15,7 @@ namespace Lockthreat.OrganizationSetup.Dto
         public string CompanyId { get; set; }
 
         public int? IndustrySectorId { get; set; }
-        public DynamicParameterValue IndustrySector { get; set; }
+        public DynamicEntityProperty IndustrySector { get; set; }
 
         public string Email { get; set; }
         public string Phone { get; set; }

@@ -1,5 +1,5 @@
 ﻿using Abp.Application.Services.Dto;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.BusinessServices.Dto;
 using Lockthreat.OrganizationSetup.Dto;
 using System;
@@ -29,19 +29,19 @@ namespace Lockthreat.Exceptions.Dto
         public string RiskDetails { get; set; }
 
         public int? CritcalityId { get; set; }
-        public DynamicParameterValue Critcality { get; set; }
+        public DynamicEntityProperty Critcality { get; set; }
 
         public int? ReviewPriorityId { get; set; }
-        public DynamicParameterValue ReviewPriority { get; set; }
+        public DynamicEntityProperty ReviewPriority { get; set; }
 
         public int? TypeId { get; set; }
-        public DynamicParameterValue Type { get; set; }
+        public DynamicEntityProperty Type { get; set; }
 
         public int? ExceptionStatusId { get; set; }
-        public DynamicParameterValue ExceptionStatus { get; set; }
+        public DynamicEntityProperty ExceptionStatus { get; set; }
 
         public int? ReviewStatusId { get; set; }
-        public DynamicParameterValue ReviewStatus { get; set; }
+        public DynamicEntityProperty ReviewStatus { get; set; }
 
 
         public long? LockThreatOrganizationId { get; set; }

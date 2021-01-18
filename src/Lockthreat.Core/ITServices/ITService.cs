@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.BusinessEntities;
 using Lockthreat.Employees;
 using Lockthreat.OrganizationSetups;
@@ -23,9 +23,9 @@ namespace Lockthreat.ITServices
         public string  ITServiceName { get; set; }
      
         public int? ServiceTypeId { get; set; }
-        public DynamicParameterValue ServiceType { get; set; }
+        public DynamicPropertyValue ServiceType { get; set; }
         public int? ServiceClassificationId  { get; set; }
-        public DynamicParameterValue ServiceClassification { get; set; }
+        public DynamicPropertyValue ServiceClassification { get; set; }
 
         public string AddressLineOne { get; set; }
         public string AddressLineTwo { get; set; }
@@ -37,7 +37,7 @@ namespace Lockthreat.ITServices
         public string PostalCode  { get; set; }
 
         public int? CountryId { get; set; }
-        public DynamicParameterValue Country { get; set; }
+        public DynamicPropertyValue Country { get; set; }
         public long? LockThreatOrganizationId  { get; set; }
         public LockThreatOrganization LockThreatOrganization  { get; set; }        
         public long? ITServiceOwnerId { get; set; }
@@ -49,17 +49,17 @@ namespace Lockthreat.ITServices
         public BusinessUnit BusinessUnit { get; set; }
 
         public int? RegulatoryMandateId  { get; set; }
-        public DynamicParameterValue RegulatoryMandate { get; set; }
+        public DynamicPropertyValue RegulatoryMandate { get; set; }
         public int? ConfidentialityId { get; set; }
-        public DynamicParameterValue Confidentiality  { get; set; }
+        public DynamicPropertyValue Confidentiality  { get; set; }
         public int? IntegrityId { get; set; }
-        public DynamicParameterValue Integrity  { get; set; }
+        public DynamicPropertyValue Integrity  { get; set; }
 
         public int? OthersId  { get; set; }
-        public DynamicParameterValue Others { get; set; }
+        public DynamicPropertyValue Others { get; set; }
 
         public int? AvailibilityId { get; set; }
-        public DynamicParameterValue Availibility { get; set; }
+        public DynamicPropertyValue Availibility { get; set; }
 
         public ICollection<ITServiceBusinessService> SelectedITserviceBusinessServices  { get; set; }
         public ICollection<ITServiceBusinessUnit> SelectedITserviceBusinessUnit  { get; set; }

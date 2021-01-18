@@ -10,10 +10,10 @@ namespace Lockthreat.Fileupload
 {
    public interface IFileUploadAppService : IApplicationService
     {
-        Task<List<string>> UploadFiles(List<UploadFileDto> input);
-        Task RenameImage(string fileName, string newFileName, string credentia);
+        //Task<List<string>> UploadFiles(List<UploadFileDto> input);
+        //Task RenameImage(string fileName, string newFileName, string credentia);
       
-        Task<string> DeleteFiles(List<string> fileNames);
-        Task<Tuple<MemoryStream, string>> DownloadFileFromBlob(string imageName, string credentia);
+        //Task<string> DeleteFiles(List<string> fileNames);
+        //Task<Tuple<MemoryStream, string>> DownloadFileFromBlob(string imageName, string credentia);
     }
 }

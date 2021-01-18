@@ -1,5 +1,5 @@
 ﻿using Abp.Application.Services.Dto;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.OrganizationSetup.Dto;
 using System;
 using System.Collections.Generic;
@@ -26,16 +26,16 @@ namespace Lockthreat.HardwareAssets.Dto
         public GetOrganizationDto LockThreatOrganization { get; set; }
 
         public int? ConfidentialityId { get; set; }
-        public DynamicParameterValue Confidentiality { get; set; }
+        public DynamicEntityProperty Confidentiality { get; set; }
 
         public int? AvailibilityId { get; set; }
-        public DynamicParameterValue Availibility { get; set; }
+        public DynamicEntityProperty Availibility { get; set; }
 
         public int? OthersId { get; set; }
-        public DynamicParameterValue Others { get; set; }
+        public DynamicEntityProperty Others { get; set; }
 
         public int? IntegrityId { get; set; }
-        public DynamicParameterValue Integrity { get; set; }
+        public DynamicEntityProperty Integrity { get; set; }
 
     }
 }

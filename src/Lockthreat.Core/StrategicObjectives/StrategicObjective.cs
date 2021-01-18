@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.Employees;
 using Lockthreat.OrganizationSetups;
 using System;
@@ -23,10 +23,10 @@ namespace Lockthreat.StrategicObjectives
         public DateTime? EffectiveDate { get; set; }
 
         public int? StatusId { get; set; }
-        public DynamicParameterValue Status { get; set; }
+        public DynamicPropertyValue Status { get; set; }
 
         public int? TypeId  { get; set; }
-        public DynamicParameterValue Type { get; set; }
+        public DynamicPropertyValue Type { get; set; }
 
         public string Goal { get; set; }
 

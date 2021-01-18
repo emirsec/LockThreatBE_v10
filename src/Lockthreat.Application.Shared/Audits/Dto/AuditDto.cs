@@ -2,7 +2,7 @@
 using Lockthreat.BusinessProcesses.Dto;
 using Lockthreat.BusinessServices.Dto;
 using Lockthreat.Countries.Dto;
-using Lockthreat.DynamicEntityParameters.Dto;
+using Lockthreat.DynamicEntityProperties.Dto;
 using Lockthreat.FacilitieDatacenters;
 using Lockthreat.Findings.Dto;
 using Lockthreat.HardwareAssets.Dto;

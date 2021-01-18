@@ -1,4 +1,4 @@
-﻿using Abp.DynamicEntityParameters;
+﻿using Abp.DynamicEntityProperties;
 using Lockthreat.GRCPrograms.Dto;
 using Lockthreat.OrganizationSetup.Dto;
 using System;
@@ -17,13 +17,13 @@ namespace Lockthreat.StrategicObjectives.Dto
         public DateTime? EffectiveDate { get; set; }
 
         public int? StatusId { get; set; }
-        public DynamicParameterValue Status { get; set; }
+        public DynamicEntityProperty Status { get; set; }
 
         public int? TypeId { get; set; }
-        public DynamicParameterValue Type { get; set; }
+        public DynamicEntityProperty Type { get; set; }
 
         public int? GoalId { get; set; }
-        public DynamicParameterValue Goal { get; set; }
+        public DynamicEntityProperty Goal { get; set; }
 
         public long? LockThreatOrganizationId { get; set; }
         public GetOrganizationDto LockThreatOrganization { get; set; }

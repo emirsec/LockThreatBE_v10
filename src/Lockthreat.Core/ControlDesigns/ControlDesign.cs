@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.Employees;
 
 using Lockthreat.InternalControls;
@@ -18,7 +18,7 @@ namespace Lockthreat.ControlDesigns
         public string Title { get; set; }
 
         public int? ResultStatusId  { get; set; }
-        public DynamicParameterValue ResultStatus { get; set; }
+        public DynamicPropertyValue ResultStatus { get; set; }
 
         public long? InternalControlId { get; set; }
         public InternalControl InternalControl { get; set; }

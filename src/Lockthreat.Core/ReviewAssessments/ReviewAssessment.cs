@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.Employees;
 using Lockthreat.Questions;
 using System;
@@ -21,13 +21,13 @@ namespace Lockthreat.ReviewAssessments
         public string  ReviewTitle { get; set; }
 
         public int? ReviewTypeId  { get; set; }
-        public DynamicParameterValue ReviewType { get; set; }
+        public DynamicPropertyValue ReviewType { get; set; }
 
         public long? AssignedToId  { get; set; }
         public Employee AssignedTo { get; set; }
 
         public int? ScheduleId  { get; set; }
-        public DynamicParameterValue Schedule { get; set; }
+        public DynamicPropertyValue Schedule { get; set; }
         
         public int? EveryDays { get; set; }
 

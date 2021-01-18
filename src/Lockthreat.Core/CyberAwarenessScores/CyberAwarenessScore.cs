@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.Employees;
 using System;
 using System.Collections.Generic;
@@ -20,13 +20,13 @@ namespace Lockthreat.CyberAwarenessScores
         public Employee Employee { get; set; }
         
         public int? TargetTypeId { get; set; }
-        public DynamicParameterValue TargetType { get; set; }
+        public DynamicPropertyValue TargetType { get; set; }
         public int? SatusId { get; set; }
-        public DynamicParameterValue Status { get; set; }
+        public DynamicPropertyValue Status { get; set; }
         public int? SourceId { get; set; }
-        public DynamicParameterValue Source { get; set; }
+        public DynamicPropertyValue Source { get; set; }
         public int? ScheduleId { get; set; }
-        public DynamicParameterValue Schedule { get; set; }
+        public DynamicPropertyValue Schedule { get; set; }
         public string Description { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }

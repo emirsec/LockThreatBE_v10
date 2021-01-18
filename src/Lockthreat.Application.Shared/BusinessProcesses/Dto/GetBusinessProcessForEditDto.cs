@@ -1,4 +1,4 @@
-﻿using Abp.DynamicEntityParameters;
+﻿using Abp.DynamicEntityProperties;
 using Lockthreat.Employee.Dto;
 using Lockthreat.OrganizationSetup.Dto;
 using System;
@@ -16,20 +16,20 @@ namespace Lockthreat.BusinessProcesses.Dto
         [Required]
         public string BusinessProcessName { get; set; } 
         public int? StatusId { get; set; }
-        public DynamicParameterValue Status { get; set; } 
+        public DynamicEntityProperty Status { get; set; } 
         public string Description { get; set; } 
         public int? ProcessTypeId { get; set; }
-        public DynamicParameterValue ProcessType { get; set; } 
+        public DynamicEntityProperty ProcessType { get; set; } 
         public int? SLAApplicableId { get; set; }
-        public DynamicParameterValue SLAApplicable { get; set; } 
+        public DynamicEntityProperty SLAApplicable { get; set; } 
         public int? ActivityCycleId { get; set; }
-        public DynamicParameterValue ActivityCycle { get; set; } 
+        public DynamicEntityProperty ActivityCycle { get; set; } 
         public string Address { get; set; }
         public string City { get; set; }
         public string State { get; set; } 
         public string PostalCode { get; set; }
         public int? CountryId { get; set; }
-        public DynamicParameterValue Country { get; set; }
+        public DynamicEntityProperty Country { get; set; }
         public long? CompanyNameId { get; set; }
         public GetOrganizationForEditDto CompanyName { get; set; } 
         public long? ProcessManagerId { get; set; }
@@ -39,19 +39,19 @@ namespace Lockthreat.BusinessProcesses.Dto
         public long? BusinessUnitOwnerId { get; set; }
         public GetEmployeeForEditDto BusinessUnitOwner { get; set; } 
         public int? RegulatoryMandateId { get; set; }
-        public DynamicParameterValue RegulatoryMandate { get; set; } 
+        public DynamicEntityProperty RegulatoryMandate { get; set; } 
         public int? ProcessPriorityId { get; set; }
-        public DynamicParameterValue ProcessPriority { get; set; } 
+        public DynamicEntityProperty ProcessPriority { get; set; } 
         public int? OthersId { get; set; }
-        public DynamicParameterValue Others { get; set; } 
+        public DynamicEntityProperty Others { get; set; } 
         public int? ConfidentialityId { get; set; }
-        public DynamicParameterValue Confidentiality { get; set; } 
+        public DynamicEntityProperty Confidentiality { get; set; } 
         public int? ReviewPeriodId { get; set; }
-        public DynamicParameterValue ReviewPeriod { get; set; } 
+        public DynamicEntityProperty ReviewPeriod { get; set; } 
         public int? IntergrityId { get; set; }
-        public DynamicParameterValue Intergrity { get; set; } 
+        public DynamicEntityProperty Intergrity { get; set; } 
         public int? AvailibilityId { get; set; }
-        public DynamicParameterValue Availibility { get; set; } 
+        public DynamicEntityProperty Availibility { get; set; } 
         public string Documents { get; set; }
     }
 }

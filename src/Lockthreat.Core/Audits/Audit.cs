@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.Audits;
 using Lockthreat.BusinessEntities;
 using Lockthreat.Employees;
@@ -28,7 +28,7 @@ namespace Lockthreat.Audits
         public string  AuditTypeseother  { get; set;}
 
         public int? FinacialYearId { get; set; }
-        public DynamicParameterValue FinacialYear { get; set; }
+        public DynamicPropertyValue FinacialYear { get; set; }
 
         public string FinacialYearOther { get; set; }
 
@@ -39,7 +39,7 @@ namespace Lockthreat.Audits
         public int? AuditDuration { get; set; }
 
         public int? StatusId { get; set; }
-        public DynamicParameterValue Status { get; set; }
+        public DynamicPropertyValue Status { get; set; }
 
         public string  AuditLocationAddressOne  { get; set; }
 
@@ -52,10 +52,10 @@ namespace Lockthreat.Audits
         public string PostalCode { get; set; }
 
         public int? CountryId { get; set; }
-        public DynamicParameterValue Country { get; set; }
+        public DynamicPropertyValue Country { get; set; }
 
         public int? AuditAreaId  { get; set; }
-        public DynamicParameterValue AuditArea  { get; set; }
+        public DynamicPropertyValue AuditArea  { get; set; }
 
         public string AuditReference { get; set; }
 

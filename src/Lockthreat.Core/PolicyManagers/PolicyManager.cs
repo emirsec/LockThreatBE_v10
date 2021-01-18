@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.Employees;
 using Lockthreat.OrganizationSetups;
 using System;
@@ -15,12 +15,12 @@ namespace Lockthreat.PolicyManagers
         public string PolicyId { get; set; }
 
         public int? PolicyTypeId { get; set; }
-        public DynamicParameterValue PolicyType { get; set; }
+        public DynamicPropertyValue PolicyType { get; set; }
 
         public long? RelatedPoliciesId { get; set; }
 
         public int? PolicyStatusId { get; set; }
-        public DynamicParameterValue PolicyStatus { get; set; }
+        public DynamicPropertyValue PolicyStatus { get; set; }
 
         public long? PolicyOwnerId { get; set; }
         public Employee PolicyOwner { get; set; }

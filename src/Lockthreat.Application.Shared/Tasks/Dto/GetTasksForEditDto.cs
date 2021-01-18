@@ -1,4 +1,4 @@
-﻿using Abp.DynamicEntityParameters;
+﻿using Abp.DynamicEntityProperties;
 using Lockthreat.AddTasks;
 using Lockthreat.Employee.Dto;
 using System;
@@ -22,13 +22,13 @@ namespace Lockthreat.Tasks.Dto
         public DateTime? EndDate { get; set; } 
         public DateTime? ActualCompleted { get; set; } 
         public int? TaskTypeId { get; set; }
-        public DynamicParameterValue TaskType { get; set; } 
+        public DynamicEntityProperty TaskType { get; set; } 
         public int? LinkedToId { get; set; }
-        public DynamicParameterValue LinkedTo { get; set; } 
+        public DynamicEntityProperty LinkedTo { get; set; } 
         public int? StatusId { get; set; }
-        public DynamicParameterValue Status { get; set; } 
+        public DynamicEntityProperty Status { get; set; } 
         public int? RiskLevelId { get; set; }
-        public DynamicParameterValue RiskLevel { get; set; } 
+        public DynamicEntityProperty RiskLevel { get; set; } 
         public long? RequestedById { get; set; }
         public GetEmployeeForEditDto RequestedBy { get; set; } 
         public long? AssignedUserId { get; set; }

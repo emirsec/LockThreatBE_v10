@@ -1,5 +1,5 @@
 ﻿using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Lockthreat.GrcPrograms 
@@ -12,6 +12,6 @@ namespace Lockthreat.GrcPrograms
         public GrcProgram GrcProgram { get; set; }
 
         public int? CountryId { get; set; }
-        public DynamicParameterValue Country { get; set; }
+        public DynamicPropertyValue Country { get; set; }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.BusinessServices.Dto;
 using Lockthreat.Employee.Dto;
 using Lockthreat.OrganizationSetup.Dto;
@@ -20,13 +20,13 @@ namespace Lockthreat.FacilitieDatacenters.Dto
         public string FacilityAddressTwo { get; set; }
 
         public int? FacilityTypeId { get; set; }
-        public DynamicParameterValue FacilityType { get; set; }
+        public DynamicEntityProperty FacilityType { get; set; }
         public string State { get; set; }
 
         public string City { get; set; }
         public string PostalCode { get; set; }
         public int? CountryId { get; set; }
-        public DynamicParameterValue Country { get; set; }
+        public DynamicEntityProperty Country { get; set; }
 
         public long? LockThreatOrganizationId { get; set; }
         public GetOrganizationForEditDto LockThreatOrganization { get; set; }
@@ -37,13 +37,13 @@ namespace Lockthreat.FacilitieDatacenters.Dto
         public BusinessUnitPrimaryDto BusinessUnitGaurdian { get; set; }
 
         public int? ConfidentialityId { get; set; }
-        public DynamicParameterValue Confidentiality { get; set; }
+        public DynamicEntityProperty Confidentiality { get; set; }
         public int? IntegrityId { get; set; }
-        public DynamicParameterValue Integrity { get; set; }
+        public DynamicEntityProperty Integrity { get; set; }
         public int? AvailibilityId { get; set; }
-        public DynamicParameterValue Availibility { get; set; }
+        public DynamicEntityProperty Availibility { get; set; }
         public int? OthersId { get; set; }
-        public DynamicParameterValue Others { get; set; }
+        public DynamicEntityProperty Others { get; set; }
 
     }
 }

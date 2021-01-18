@@ -1,7 +1,7 @@
 ﻿using Abp.Domain.Entities.Auditing;
 using Lockthreat.AddTasks;
 using Lockthreat.BusinessServices.Dto;
-using Lockthreat.DynamicEntityParameters.Dto;
+using Lockthreat.DynamicEntityProperties.Dto;
 using Lockthreat.UploadFiles.Dto;
 using System;
 using System.Collections.Generic;

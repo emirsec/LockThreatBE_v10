@@ -1,5 +1,5 @@
 ﻿using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.Audits;
 using Lockthreat.Employees;
 using System;
@@ -14,7 +14,7 @@ namespace Lockthreat.Audits
     {
        
         public int? DocumentSourceId { get; set; }
-        public DynamicParameterValue DocumentSource  { get; set; }
+        public DynamicPropertyValue DocumentSource  { get; set; }
         public string Attachment { get; set; }
 
         public string DocumentLink { get; set; }

@@ -1,4 +1,4 @@
-﻿using Abp.DynamicEntityParameters;
+﻿using Abp.DynamicEntityProperties;
 using Lockthreat.Countries.Dto;
 using Lockthreat.IndustrySectors.Dto;
 using Lockthreat.Organization;
@@ -19,12 +19,12 @@ namespace Lockthreat.OrganizationSetup.Dto
       
         public virtual long? ParentOrganizationId { get; set; }
         public int? IndustrySectorId { get; set; }
-        public DynamicParameterValue IndustrySector { get; set; }
+        public DynamicEntityProperty IndustrySector { get; set; }
         public bool IsAuditableEntity { get; set; }
         public string Description { get; set; }
 
         public int? CountryId { get; set; }
-        public DynamicParameterValue Country { get; set; }
+        public DynamicEntityProperty Country { get; set; }
 
         public int EmployeeSize { get; set; } 
         public string CompanyWebsite { get; set; } 
@@ -36,7 +36,7 @@ namespace Lockthreat.OrganizationSetup.Dto
         public string PostalCode { get; set; }
 
         public int? AddressCountryId { get; set; }
-        public DynamicParameterValue AddressCountry { get; set; }
+        public DynamicEntityProperty AddressCountry { get; set; }
 
         public string ContactFirstName { get; set; }
         public string ContactLastName { get; set; } 

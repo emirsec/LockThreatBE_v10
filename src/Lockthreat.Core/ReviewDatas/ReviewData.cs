@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.BusinessEntities;
 using Lockthreat.Contacts;
 using Lockthreat.CyberAwarenessScores;
@@ -69,7 +69,7 @@ namespace Lockthreat.ReviewDatas
         public DateTime? VerfiedTime { get; set; }
 
         public int? ReviewQuestionStatusId  { get; set; }
-        public DynamicParameterValue ReviewQuestionStatus { get; set; }
+        public DynamicPropertyValue ReviewQuestionStatus { get; set; }
         
         public bool QuestionAnswered { get; set; }
     }

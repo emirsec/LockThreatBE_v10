@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.BusinessEntities;
 using Lockthreat.Employees;
 using Lockthreat.OrganizationSetups;
@@ -23,19 +23,19 @@ namespace Lockthreat.BusinessProcesses
         public string BusinessProcessName { get; set; }
         
         public int? StatusId { get; set; }
-        public DynamicParameterValue Status { get; set; }
+        public DynamicPropertyValue Status { get; set; }
 
         public string Description { get; set; }
       
         public int? ProcessTypeId { get; set; }
-        public DynamicParameterValue ProcessType { get; set; }
+        public DynamicPropertyValue ProcessType { get; set; }
 
         public int? SlaApplicableId  { get; set; }
-        public DynamicParameterValue SlaApplicable  { get; set; }
+        public DynamicPropertyValue SlaApplicable  { get; set; }
 
        
         public int? ActivityCycleId { get; set; }
-        public DynamicParameterValue ActivityCycle { get; set; }
+        public DynamicPropertyValue ActivityCycle { get; set; }
 
         public string Address { get; set; }
         public string City { get; set; }
@@ -43,7 +43,7 @@ namespace Lockthreat.BusinessProcesses
 
         public string PostalCode { get; set; }
         public int? CountryId { get; set; }
-        public DynamicParameterValue Country  { get; set; }
+        public DynamicPropertyValue Country  { get; set; }
         public long? LockThreatOrganizationId  { get; set; }
         public LockThreatOrganization LockThreatOrganization  { get; set; }
 
@@ -57,25 +57,25 @@ namespace Lockthreat.BusinessProcesses
         public BusinessUnit BusinessUnit  { get; set; }
 
         public int?  RegulatoryId  { get; set; }
-        public DynamicParameterValue Regulatory  { get; set; }
+        public DynamicPropertyValue Regulatory  { get; set; }
 
         public int? ProcessPriorityId { get; set; }
-        public DynamicParameterValue ProcessPriority  { get; set; }
+        public DynamicPropertyValue ProcessPriority  { get; set; }
 
         public int? OthersId { get; set; }
-        public DynamicParameterValue Others  { get; set; }
+        public DynamicPropertyValue Others  { get; set; }
 
         public int? ConfidentialityId { get; set; }
-        public DynamicParameterValue Confidentiality  { get; set; }
+        public DynamicPropertyValue Confidentiality  { get; set; }
 
         public int? ReviewPeriodId  { get; set; }
-        public DynamicParameterValue ReviewPeriod { get; set; }
+        public DynamicPropertyValue ReviewPeriod { get; set; }
 
         public int? IntergrityId { get; set; }
-        public DynamicParameterValue Intergrity { get; set; }
+        public DynamicPropertyValue Intergrity { get; set; }
 
         public int? AvailibilityId { get; set; }
-        public DynamicParameterValue Availibility  { get; set; }
+        public DynamicPropertyValue Availibility  { get; set; }
 
         public string Documents { get; set; }
 

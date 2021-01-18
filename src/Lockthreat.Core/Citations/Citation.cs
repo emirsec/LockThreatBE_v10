@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.AuthoratativeDocuments;
 using System;
 using System.Collections.Generic;
@@ -16,7 +16,7 @@ namespace Lockthreat.Citations
 
         public int? ParentCitationId { get; set; }
         public int? CitationTypeId  { get; set; }
-        public DynamicParameterValue CitationType { get; set; }
+        public DynamicPropertyValue CitationType { get; set; }
 
         public string CitationId { get; set; }
 
@@ -24,12 +24,12 @@ namespace Lockthreat.Citations
         public string CitationOriginId { get; set; }
 
         public int? FrameworkObjectivesId  { get; set; }
-        public DynamicParameterValue FrameworkObjectives { get; set; }
+        public DynamicPropertyValue FrameworkObjectives { get; set; }
         
         public string CitationTitle { get; set; }
 
         public int? CitationClassId  { get; set; }
-        public DynamicParameterValue CitationClass { get; set; }
+        public DynamicPropertyValue CitationClass { get; set; }
 
         public string CustomApplicability { get; set; }
 

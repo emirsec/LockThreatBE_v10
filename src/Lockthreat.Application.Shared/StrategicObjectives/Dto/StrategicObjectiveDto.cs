@@ -1,6 +1,6 @@
 ﻿using Abp.Application.Services.Dto;
-using Abp.DynamicEntityParameters;
-using Lockthreat.DynamicEntityParameters.Dto;
+using Abp.DynamicEntityProperties;
+using Lockthreat.DynamicEntityProperties.Dto;
 using Lockthreat.GRCPrograms.Dto;
 using Lockthreat.OrganizationSetup.Dto;
 using System;

@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.Employees;
 using System;
 using System.Collections.Generic;
@@ -25,21 +25,21 @@ namespace Lockthreat.Incidents
         public string Description { get; set; }
 
         public int? IncidentCategoryId  { get; set; }
-        public DynamicParameterValue IncidentCategory { get; set; }
+        public DynamicPropertyValue IncidentCategory { get; set; }
 
         public int? IncidentTypesId { get; set; }
-        public DynamicParameterValue IncidentTypes  { get; set; }
+        public DynamicPropertyValue IncidentTypes  { get; set; }
 
         public int? IncidentPriorityId  { get; set; }
-        public DynamicParameterValue IncidentPriority  { get; set; }
+        public DynamicPropertyValue IncidentPriority  { get; set; }
 
         public int? IncidentSeverityId  { get; set; }
-        public DynamicParameterValue IncidentSeverity { get; set; }
+        public DynamicPropertyValue IncidentSeverity { get; set; }
 
         public DateTime? OccuredDate { get; set; }
 
         public int? AdversaryId  { get; set; }
-        public DynamicParameterValue Adversary { get; set; }
+        public DynamicPropertyValue Adversary { get; set; }
 
         public DateTime? ReportedDate { get; set; }
 
@@ -68,9 +68,9 @@ namespace Lockthreat.Incidents
         public bool RepeatIncident { get; set; }
 
         public int? EffectId  { get; set; }
-        public DynamicParameterValue Effect { get; set; }
+        public DynamicPropertyValue Effect { get; set; }
         public int? CriticalityId  { get; set; }
-        public DynamicParameterValue Criticality  { get; set; }
+        public DynamicPropertyValue Criticality  { get; set; }
 
         
         public string Identification { get; set; }
@@ -81,7 +81,7 @@ namespace Lockthreat.Incidents
         public string RecoveryMeasures { get; set; }
 
         public int? IncidentImpactId  { get; set; }
-        public DynamicParameterValue IncidentImpact { get; set; }
+        public DynamicPropertyValue IncidentImpact { get; set; }
 
         public string FollowUpAction { get; set; }
 
@@ -92,10 +92,10 @@ namespace Lockthreat.Incidents
         public Employee FollowUpCompletedBy { get; set; }
 
         public int? IncidentStatusId  { get; set; }
-        public DynamicParameterValue IncidentStatus  { get; set; }
+        public DynamicPropertyValue IncidentStatus  { get; set; }
 
         public int? DetectedbyInternalControlsId  { get; set; }
-        public DynamicParameterValue DetectedbyInternalControls  { get; set; }
+        public DynamicPropertyValue DetectedbyInternalControls  { get; set; }
 
         
 

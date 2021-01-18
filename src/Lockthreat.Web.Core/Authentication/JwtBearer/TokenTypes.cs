@@ -1,8 +1,8 @@
 ﻿namespace Lockthreat.Web.Authentication.JwtBearer
 {
-    public enum TokenType
-    {
-        AccessToken,
-        RefreshToken
-    }
+    //public enum TokenType
+    //{
+    //    AccessToken,
+    //    RefreshToken
+    //}
 }

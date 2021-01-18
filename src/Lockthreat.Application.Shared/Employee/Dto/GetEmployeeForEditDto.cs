@@ -1,4 +1,4 @@
-﻿using Abp.DynamicEntityParameters;
+﻿using Abp.DynamicEntityProperties;
 using Lockthreat.Authorization.Users.Dto;
 using Lockthreat.Business.Dto;
 
@@ -27,10 +27,10 @@ namespace Lockthreat.Employee.Dto
         public string ProfilePicture { get; set; } //stores Base 64 string 
         public bool IsNotifiedByEmail { get; set; }
         public int? EmployeeTypeId { get; set; }
-        public DynamicParameterValue EmployeeType { get; set; }
+        public DynamicEntityProperty EmployeeType { get; set; }
 
         public int? EmployeeGradeId { get; set; }
-        public DynamicParameterValue EmployeeGrade { get; set; }
+        public DynamicEntityProperty EmployeeGrade { get; set; }
 
         public long? LockThreatOrganizationId  { get; set; }
         public GetOrganizationForEditDto LockThreatOrganization  { get; set; }
@@ -38,7 +38,7 @@ namespace Lockthreat.Employee.Dto
         public GetBusinessUnitForEditDto BusinessUnit { get; set; }
 
         public int? RiskGroupId { get; set; }
-        public DynamicParameterValue RiskGroup { get; set; }
+        public DynamicEntityProperty RiskGroup { get; set; }
 
         public string EmployeePosition { get; set; }
         public long? UserId { get; set; }

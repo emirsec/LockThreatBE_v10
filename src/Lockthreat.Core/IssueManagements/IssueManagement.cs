@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.Employees;
 using Lockthreat.Meetings;
 using System;
@@ -27,7 +27,7 @@ namespace Lockthreat.IssueManagements
 
 
         public int? IssueCategoryId { get; set; }
-        public DynamicParameterValue IssueCategory { get; set; }
+        public DynamicPropertyValue IssueCategory { get; set; }
 
         public bool RiskAssessmentRequired { get; set; }
 

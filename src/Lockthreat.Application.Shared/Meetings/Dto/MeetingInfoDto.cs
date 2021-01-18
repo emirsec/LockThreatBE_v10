@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities.Auditing;
 using Lockthreat.Countries.Dto;
-using Lockthreat.DynamicEntityParameters.Dto;
+using Lockthreat.DynamicEntityProperties.Dto;
 using Lockthreat.GRCPrograms.Dto;
 using Lockthreat.HardwareAssets.Dto;
 using System;

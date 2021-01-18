@@ -1,6 +1,6 @@
 ﻿using Abp.Application.Services;
 using Lockthreat.Countries.Dto;
-using Lockthreat.DynamicEntityParameters.Dto;
+using Lockthreat.DynamicEntityProperties.Dto;
 using Lockthreat.Meetings.Dto;
 using System;
 using System.Collections.Generic;

@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.Audits;
 using Lockthreat.BusinessProcesses;
 using Lockthreat.Contacts;
@@ -35,7 +35,7 @@ namespace Lockthreat.CAPA
         public BusinessProcess BusinessProcess { get; set; }
 
         public int? TypeId { get; set; }
-        public DynamicParameterValue Type { get; set; }
+        public DynamicPropertyValue Type { get; set; }
         
         public string FindingorNC { get; set; }
 

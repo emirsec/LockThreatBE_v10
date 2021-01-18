@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.Employees;
 using Lockthreat.Findings;
 using Lockthreat.FindingsInformation;
@@ -22,10 +22,10 @@ namespace Lockthreat.InternalControls
         public string ICTitle { get; set; }
 
         public int? FrequencyTypeId  { get; set; }
-        public DynamicParameterValue FrequencyType { get; set; }
+        public DynamicPropertyValue FrequencyType { get; set; }
 
         public int? InternalAuditControlId  { get; set; }
-        public DynamicParameterValue InternalAuditControl { get; set; }
+        public DynamicPropertyValue InternalAuditControl { get; set; }
 
         public string Notes { get; set; }
 
@@ -33,28 +33,28 @@ namespace Lockthreat.InternalControls
         public Finding Finding  { get; set; }
 
         public int? ControlFrequencyId  { get; set; }
-        public DynamicParameterValue ControlFrequency  { get; set; }
+        public DynamicPropertyValue ControlFrequency  { get; set; }
 
         public int? ControlStatusId  { get; set; }
-        public DynamicParameterValue ControlStatus  { get; set; }
+        public DynamicPropertyValue ControlStatus  { get; set; }
 
         public string TestingProcedure { get; set; }
 
         public string ICId { get; set; }
         public int? IcTypeId   { get; set; }
-        public DynamicParameterValue IcType  { get; set; }
+        public DynamicPropertyValue IcType  { get; set; }
         
         public string ControlDescription { get; set; }
 
         public int? AutomationId  { get; set; }
-        public DynamicParameterValue Automation { get; set; }
+        public DynamicPropertyValue Automation { get; set; }
         
         public int? SampleSize { get; set; }
         public int? PriorityId  { get; set; }
-        public DynamicParameterValue Priority { get; set; }
+        public DynamicPropertyValue Priority { get; set; }
 
         public int? ComplianceStatusId  { get; set; }
-        public DynamicParameterValue ComplianceStatus { get; set; }
+        public DynamicPropertyValue ComplianceStatus { get; set; }
 
         public long? EmployeeId  { get; set; }
         public Employee Employee  { get; set; }

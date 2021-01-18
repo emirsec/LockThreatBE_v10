@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.Employees;
 using Lockthreat.OrganizationSetups;
 using Lockthreat.Vendors;
@@ -15,7 +15,7 @@ namespace Lockthreat.Contacts
         public int? TenantId { get; set; }
         public string ContactId { get; set; }      
         public int? ContactTypeId  { get; set; }
-        public DynamicParameterValue ContactType { get; set; }
+        public DynamicPropertyValue ContactType { get; set; }
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -38,7 +38,7 @@ namespace Lockthreat.Contacts
         public string PostalCode { get; set; }
 
         public int? CountryId  { get; set; }
-        public DynamicParameterValue Country  { get; set; }
+        public DynamicPropertyValue Country  { get; set; }
 
 
         public long? LoginUserId  { get; set; }

@@ -1,5 +1,5 @@
 ﻿using Abp.Application.Services.Dto;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -26,14 +26,14 @@ namespace Lockthreat.Vendors.Dto
         public string City { get; set; }
         public int? PostalCode { get; set; }
         public int? CountryId { get; set; }
-        public DynamicParameterValue Country { get; set; }
+        public DynamicEntityProperty Country { get; set; }
         public int? VendorTypeId { get; set; }
-        public DynamicParameterValue VendorType { get; set; }
+        public DynamicEntityProperty VendorType { get; set; }
         public int? IndustryId { get; set; }
-        public DynamicParameterValue Industry { get; set; }
+        public DynamicEntityProperty Industry { get; set; }
         public int? VendorCriticalRatingId { get; set; }
-        public DynamicParameterValue VendorCriticalRating { get; set; }
+        public DynamicEntityProperty VendorCriticalRating { get; set; }
         public int? VendorInitialRatingId { get; set; }
-        public DynamicParameterValue VendorInitialRating { get; set; }
+        public DynamicEntityProperty VendorInitialRating { get; set; }
     }
 }

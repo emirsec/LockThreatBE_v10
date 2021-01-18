@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.BusinessEntities;
 using Lockthreat.Employees;
 using Lockthreat.FacilitieDatacenters;
@@ -40,16 +40,16 @@ namespace Lockthreat.HardwareAssets
         public BusinessUnit BusinessUnitGaurdian { get; set; }
 
         public int? ConfidentialityId { get; set; }
-        public DynamicParameterValue Confidentiality  { get; set; }
+        public DynamicPropertyValue Confidentiality  { get; set; }
 
         public int? AvailibilityId { get; set; }
-        public DynamicParameterValue Availibility  { get; set; }
+        public DynamicPropertyValue Availibility  { get; set; }
 
         public int? OthersId { get; set; }
-        public DynamicParameterValue Others  { get; set; }
+        public DynamicPropertyValue Others  { get; set; }
 
         public int? IntegrityId { get; set; }
-        public DynamicParameterValue Integrity  { get; set; }
+        public DynamicPropertyValue Integrity  { get; set; }
 
         public long? EmployeeId { get; set; }
         public Employee Employee { get; set; }

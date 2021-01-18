@@ -1,4 +1,4 @@
-﻿using Abp.DynamicEntityParameters;
+﻿using Abp.DynamicEntityProperties;
 using Abp.Runtime.Validation;
 using Lockthreat.BusinessEntities;
 using Lockthreat.Dto;

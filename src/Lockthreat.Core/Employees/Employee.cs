@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.Authorization.Users;
 using Lockthreat.BusinessEntities;
 using Lockthreat.Employees;
@@ -36,10 +36,10 @@ namespace Lockthreat.Employees
         public bool IsNotifiedByEmail { get; set; }
 
         public int? EmployeeGradeId  { get; set; }
-        public DynamicParameterValue EmployeeGrade { get; set; }
+        public DynamicPropertyValue EmployeeGrade { get; set; }
 
         public int? EmployeeTypeId { get; set; }
-        public DynamicParameterValue EmployeeType { get; set; }
+        public DynamicPropertyValue EmployeeType { get; set; }
        
         public long? LockThreatOrganizationId  { get; set; }
         public LockThreatOrganization LockThreatOrganization  { get; set; }
@@ -57,7 +57,7 @@ namespace Lockthreat.Employees
         public string CompanyId { get; set; }
 
         public int? RiskGroupId  { get; set; }
-        public DynamicParameterValue RiskGroup  { get; set; }
+        public DynamicPropertyValue RiskGroup  { get; set; }
 
         //...BusinessServiceOwner and BusinessServiceManager,userlink,riskgroup is Remaining
 

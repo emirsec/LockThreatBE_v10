@@ -1,4 +1,4 @@
-﻿using Abp.DynamicEntityParameters;
+﻿using Abp.DynamicEntityProperties;
 using Lockthreat.BusinessEntities;
 using Lockthreat.OrganizationSetup.Dto;
 using System;

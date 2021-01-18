@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.Employees;
 using Lockthreat.RiskManagements;
 using System;
@@ -24,7 +24,7 @@ public   class RiskTreatment : FullAuditedEntity<long>, IMayHaveTenant
         public Employee Owner  { get; set; }
 
         public int? TreatmentActionId  { get; set; }
-        public DynamicParameterValue TreatmentAction { get; set; }
+        public DynamicPropertyValue TreatmentAction { get; set; }
 
         public long? MitigationOwnerId  { get; set; }
         public Employee MitigationOwner { get; set; }
@@ -38,17 +38,17 @@ public   class RiskTreatment : FullAuditedEntity<long>, IMayHaveTenant
         public string MitigationActivity { get; set; }
 
         public int? MitigationStatusId  { get; set; }
-        public DynamicParameterValue MitigationStatus { get; set; }
+        public DynamicPropertyValue MitigationStatus { get; set; }
 
         public string RiskAvoidancePlan { get; set; }
 
         public string Notes { get; set; }
 
         public int? ResidualImpactRatingId  { get; set; }
-        public DynamicParameterValue ResidualImpactRating  { get; set; }
+        public DynamicPropertyValue ResidualImpactRating  { get; set; }
 
         public int? ResidualLikelihoodRatingId  { get; set; }
-        public DynamicParameterValue ResidualLikelihoodRating { get; set; }
+        public DynamicPropertyValue ResidualLikelihoodRating { get; set; }
         public string   ResidualRiskNotes { get; set; }
 
 

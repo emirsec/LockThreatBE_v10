@@ -1,4 +1,4 @@
-﻿using Abp.DynamicEntityParameters;
+﻿using Abp.DynamicEntityProperties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

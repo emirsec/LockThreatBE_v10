@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.Employees;
 using Lockthreat.Meetings;
 using System;
@@ -35,16 +35,16 @@ namespace Lockthreat.AddTasks
         public DateTime? ActualCompleted { get; set; }
 
         public int? TaskTypeId { get; set; }
-        public DynamicParameterValue TaskType { get; set; }
+        public DynamicPropertyValue TaskType { get; set; }
 
         public int? LinkedToId { get; set; }
-        public DynamicParameterValue LinkedTo { get; set; }
+        public DynamicPropertyValue LinkedTo { get; set; }
 
         public int? StatusId { get; set; }
-        public DynamicParameterValue Status { get; set; }
+        public DynamicPropertyValue Status { get; set; }
 
         public int? RiskLevelId { get; set; }
-        public DynamicParameterValue RiskLevel { get; set; }
+        public DynamicPropertyValue RiskLevel { get; set; }
 
         public long? RequestedById { get; set; }
         public Employee RequestedBy { get; set; }

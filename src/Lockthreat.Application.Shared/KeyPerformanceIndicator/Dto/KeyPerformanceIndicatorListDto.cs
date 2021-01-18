@@ -1,7 +1,7 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -15,9 +15,9 @@ namespace Lockthreat.KeyPerformanceIndicator.Dto
         [Required]
         public string KeyPerformanceIndicatorTitle { get; set; } 
         public int? StatusId { get; set; }
-        public DynamicParameterValue Status { get; set; } 
+        public DynamicEntityProperty Status { get; set; } 
         public int? FrequencyId { get; set; }
-        public DynamicParameterValue Frequency { get; set; }
+        public DynamicEntityProperty Frequency { get; set; }
         public bool IsActive { get; set; }
         public DateTime CreationTime { get; set; }
         public string Description { get; set; }

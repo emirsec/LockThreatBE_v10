@@ -1,5 +1,5 @@
 ﻿using Abp.Application.Services;
-using Lockthreat.DynamicEntityParameters.Dto;
+using Lockthreat.DynamicEntityProperties.Dto;
 using System;
 using System.Collections.Generic;
 using System.Text;

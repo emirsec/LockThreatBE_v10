@@ -134,7 +134,7 @@ namespace Lockthreat.Tasks
                 TaskinfoDto result = new TaskinfoDto();
                 var res = ObjectMapper.Map<AddTask>(task);
 
-                fileUrls = await _fileUploadAppService.UploadFiles(task.UploadFiles);
+               // fileUrls = await _fileUploadAppService.UploadFiles(task.UploadFiles);
 
                 fileUrls.ForEach(x =>
                 {

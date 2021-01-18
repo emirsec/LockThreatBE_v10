@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.Employees;
 using Lockthreat.FindingsInformation;
 using Lockthreat.OrganizationSetups;
@@ -20,14 +20,14 @@ namespace Lockthreat.Findings
         public string FindingDetails { get; set; }
         public DateTime? DateCreated { get; set; }
         public int? CategoryId  { get; set; }
-        public DynamicParameterValue Category { get; set; }
+        public DynamicPropertyValue Category { get; set; }
         public string CategoryOther  { get; set; }
         public int?  FindingStatusId { get; set; }
-        public DynamicParameterValue FindingStatus { get; set; }
+        public DynamicPropertyValue FindingStatus { get; set; }
         public int? RankingId { get; set; }
-        public DynamicParameterValue Ranking { get; set; }
+        public DynamicPropertyValue Ranking { get; set; }
         public int? ClassificationId  { get; set; }
-        public DynamicParameterValue Classification { get; set; }
+        public DynamicPropertyValue Classification { get; set; }
         public long? FindingManagerId { get; set; }
         public Employee FindingManager  { get; set; }
         public long? FindingCoordinatorId { get; set; }
@@ -39,11 +39,11 @@ namespace Lockthreat.Findings
         public string Condition { get; set; }
         public string Consequence { get; set; }
         public int? ActionId { get; set; }
-        public DynamicParameterValue Action { get; set; }
+        public DynamicPropertyValue Action { get; set; }
         public long? ReviewedId  { get; set; }
         public Employee Reviewed  { get; set; }
         public int? ResponseId  { get; set; }
-        public DynamicParameterValue Response { get; set; }       
+        public DynamicPropertyValue Response { get; set; }       
         public int? PotentialCost { get; set; }     
         public long? AssignedId  { get; set; }
         public Employee Assigned { get; set; }

@@ -1,4 +1,4 @@
-﻿using Abp.DynamicEntityParameters;
+﻿using Abp.DynamicEntityProperties;
 using Lockthreat.Employee.Dto;
 using Lockthreat.GRCPrograms.Dto;
 using System;
@@ -20,7 +20,7 @@ namespace Lockthreat.Meetings.Dto
         public string MeetingLocation { get; set; }
         public string City { get; set; }
         public int? CountryId { get; set; }
-        public DynamicParameterValue Country { get; set; }
+        public DynamicEntityProperty Country { get; set; }
         public string MeetingAgenda { get; set; }
         public long? EmployeeId { get; set; }
         public GetEmployeeForEditDto  Employee { get; set; }
@@ -30,8 +30,8 @@ namespace Lockthreat.Meetings.Dto
         public long? OrganizerId { get; set; }
         public GetEmployeeForEditDto  Organizer { get; set; }
         public int? MeetingTypeId { get; set; }
-        public DynamicParameterValue MeetingType { get; set; }
+        public DynamicEntityProperty MeetingType { get; set; }
         public int? MeetingClassificationId { get; set; }
-        public DynamicParameterValue MeetingClassification { get; set; }
+        public DynamicEntityProperty MeetingClassification { get; set; }
     }
 }

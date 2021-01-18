@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.OrganizationSetups;
 using System;
 using System.Collections.Generic;
@@ -16,7 +16,7 @@ namespace Lockthreat.KeyRiskIndicators
         public string KeyRiskIndicatorsId { get; set; }
 
         public int? StatusId { get; set; }
-        public DynamicParameterValue Status  { get; set; }
+        public DynamicPropertyValue Status  { get; set; }
         [Required]
         public string KeyRiskIndicatorTitle { get; set;}
 

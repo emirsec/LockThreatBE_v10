@@ -1,5 +1,5 @@
 ﻿using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.Employees;
 using System;
 using System.Collections.Generic;
@@ -28,7 +28,7 @@ namespace Lockthreat.Audits
         public Employee Employee  { get; set; }
 
         public int? TypeId  { get; set; }
-        public DynamicParameterValue Type { get; set; }
+        public DynamicPropertyValue Type { get; set; }
 
        public string Signature { get; set; }
 

@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.Employees;
 using Lockthreat.OrganizationSetups;
 using System;
@@ -19,10 +19,10 @@ namespace Lockthreat.KeyPerformanceIndicators
         public string KeyPerformanceIndicatorTitle { get; set; }
 
         public int? StatusId { get; set; }
-        public DynamicParameterValue Status { get; set; }
+        public DynamicPropertyValue Status { get; set; }
 
         public int? FrequencyId { get; set; }
-        public DynamicParameterValue Frequency  { get; set; }
+        public DynamicPropertyValue Frequency  { get; set; }
 
         public string Description { get; set; }
 

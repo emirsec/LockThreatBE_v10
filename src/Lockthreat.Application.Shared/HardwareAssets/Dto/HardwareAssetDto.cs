@@ -1,7 +1,7 @@
 ﻿using Abp.Domain.Entities.Auditing;
 using Lockthreat.BusinessProcesses.Dto;
 using Lockthreat.BusinessServices.Dto;
-using Lockthreat.DynamicEntityParameters.Dto;
+using Lockthreat.DynamicEntityProperties.Dto;
 using Lockthreat.FacilitieDatacenters;
 using Lockthreat.OrganizationSetup.Dto;
 using System;

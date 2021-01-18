@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.AssetInformations;
 using Lockthreat.BusinessEntities;
 using Lockthreat.Employees;
@@ -35,19 +35,19 @@ namespace Lockthreat.Exceptions
         public string RiskDetails { get; set; }
 
         public int? CritcalityId { get; set; }
-        public DynamicParameterValue Critcality { get; set; }
+        public DynamicPropertyValue Critcality { get; set; }
 
         public int? ReviewPriorityId  { get; set; }
-        public DynamicParameterValue ReviewPriority { get; set; }
+        public DynamicPropertyValue ReviewPriority { get; set; }
 
         public int? TypeId  { get; set; }
-        public DynamicParameterValue Type  { get; set; }
+        public DynamicPropertyValue Type  { get; set; }
 
         public int? ExceptionStatusId  { get; set; }
-        public DynamicParameterValue ExceptionStatus  { get; set; }
+        public DynamicPropertyValue ExceptionStatus  { get; set; }
 
         public int? ReviewStatusId  { get; set; }
-        public DynamicParameterValue ReviewStatus  { get; set; }
+        public DynamicPropertyValue ReviewStatus  { get; set; }
 
         public long? LockThreatOrganizationId  { get; set; }
         public LockThreatOrganization LockThreatOrganization  { get; set; }

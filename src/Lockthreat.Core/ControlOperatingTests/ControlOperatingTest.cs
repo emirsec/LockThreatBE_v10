@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.Audits;
 using Lockthreat.Employees;
 using Lockthreat.InternalControls;
@@ -17,7 +17,7 @@ namespace Lockthreat.ControlOperatingTests
         public string COTId { get; set; }
 
         public int? TestStatusId  { get; set; }
-        public DynamicParameterValue TestStatus  { get; set; }
+        public DynamicPropertyValue TestStatus  { get; set; }
         
         public string Title { get; set; }
 
@@ -36,7 +36,7 @@ namespace Lockthreat.ControlOperatingTests
         public Employee Performedby { get; set; }
 
         public int? DataCollectionPurposeId  { get; set; }
-        public DynamicParameterValue DataCollectionPurpose { get; set; }
+        public DynamicPropertyValue DataCollectionPurpose { get; set; }
         
         public string ActualResult  { get; set; }
 

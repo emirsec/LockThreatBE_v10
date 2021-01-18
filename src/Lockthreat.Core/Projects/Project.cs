@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.Employees;
 using Lockthreat.GrcPrograms;
 using Lockthreat.OrganizationSetups;
@@ -27,7 +27,7 @@ namespace Lockthreat.Projects
         public string PostalCode { get; set; }
 
         public int? IndustryId { get; set; }
-        public DynamicParameterValue Industry { get; set; }
+        public DynamicPropertyValue Industry { get; set; }
 
 
         public string ProjectLogo { get; set; }

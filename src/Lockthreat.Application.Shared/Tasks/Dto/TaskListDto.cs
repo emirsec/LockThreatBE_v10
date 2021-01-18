@@ -1,7 +1,7 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.Employee.Dto;
 using System;
 using System.Collections.Generic;
@@ -16,7 +16,7 @@ namespace Lockthreat.Tasks.Dto
         public long? RequestedById { get; set; }
         public GetEmployeeForEditDto RequestedBy { get; set; }
         public int? TaskTypeId { get; set; }
-        public DynamicParameterValue TaskType { get; set; }
+        public DynamicEntityProperty TaskType { get; set; }
         public long? AssignedUserId { get; set; }
         public GetEmployeeForEditDto AssignedUser { get; set; }
         public bool IsActive { get; set; }

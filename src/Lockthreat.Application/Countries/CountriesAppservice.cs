@@ -1,8 +1,8 @@
 ﻿using Abp.Domain.Repositories;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using AutoMapper;
 using Lockthreat.Countries.Dto;
-using Lockthreat.DynamicEntityParameters.Dto;
+using Lockthreat.DynamicEntityProperties.Dto;
 using Lockthreat.Meetings.Dto;
 using Lockthreat.OrganizationSetup.Dto;
 using Microsoft.EntityFrameworkCore;
@@ -17,12 +17,12 @@ namespace Lockthreat.Countries
     public class CountriesAppservice : LockthreatAppServiceBase, ICountriesAppservice
     {
 
-        private readonly IRepository<DynamicParameterValue> _DynamicParameterValueRepository;
-        private readonly IRepository<DynamicParameter> _dynamicParameterManager;
+        private readonly IRepository<DynamicPropertyValue> _DynamicParameterValueRepository;
+        private readonly IRepository<DynamicProperty> _dynamicParameterManager;
 
         public CountriesAppservice(
-          IRepository<DynamicParameterValue> DynamicParameterValueRepository,
-          IRepository<DynamicParameter> dynamicParameterManager
+          IRepository<DynamicPropertyValue> DynamicParameterValueRepository,
+          IRepository<DynamicProperty> dynamicParameterManager
           )
         {
             _DynamicParameterValueRepository = DynamicParameterValueRepository;
@@ -34,11 +34,11 @@ namespace Lockthreat.Countries
             var getCountries = new List<CountryDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == "country");
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == "country");
                 if (getcheckId != null)
                 {
                     getCountries = await _DynamicParameterValueRepository.GetAll()
-                       .Where(l => l.DynamicParameterId == getcheckId.Id)
+                       .Where(l => l.DynamicPropertyId == getcheckId.Id)
                         .Select(x => new CountryDto()
                         {
                             Id = x.Id,
@@ -59,11 +59,11 @@ namespace Lockthreat.Countries
             var getconfidentiality = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == "confidentiality");
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == "confidentiality");
                 if (getcheckId != null)
                 {
 
-                    var getConfidentiality = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var getConfidentiality = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
 
                     if (getConfidentiality.Count() != 0)
                     {
@@ -84,11 +84,11 @@ namespace Lockthreat.Countries
             var getserviceTypes = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == "service type");
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == "service type");
                 if (getcheckId != null)
                 {
 
-                    var getserviceType = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var getserviceType = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
 
                     if (getserviceType.Count() != 0)
                     {
@@ -109,11 +109,11 @@ namespace Lockthreat.Countries
             var getinintegrity  = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == "integrity");
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == "integrity");
                 if (getcheckId != null)
                 {
 
-                    var getConfidentiality = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var getConfidentiality = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
 
                     if (getConfidentiality.Count() != 0)
                     {
@@ -133,11 +133,11 @@ namespace Lockthreat.Countries
             var getothers = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == "others");
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == "others");
                 if (getcheckId != null)
                 {
 
-                    var getother = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var getother = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
 
                     if (getother.Count() != 0)
                     {
@@ -157,11 +157,11 @@ namespace Lockthreat.Countries
             var getavailibility = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == "availibility");
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == "availibility");
                 if (getcheckId != null)
                 {
 
-                    var getother = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var getother = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
 
                     if (getother.Count() != 0)
                     {
@@ -181,11 +181,11 @@ namespace Lockthreat.Countries
             var getIndustrySectors = new List<DynamicNameValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == "industry sector");
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == "industry sector");
                 if (getcheckId != null)
                 {
 
-                    var getother = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id)
+                    var getother = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id)
                         .Select(x => new DynamicNameValueDto()
                         {
                             Id = x.Id,
@@ -209,11 +209,11 @@ namespace Lockthreat.Countries
             var getComponents = new List<DynamicNameValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == "Components");
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == "Components");
                 if (getcheckId != null)
                 {
 
-                    var getother = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id)
+                    var getother = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id)
                         .Select(x => new DynamicNameValueDto()
                         {
                             Id = x.Id,
@@ -238,11 +238,11 @@ namespace Lockthreat.Countries
             var getallgrade  = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == "employee grade");
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == "employee grade");
                 if (getcheckId != null)
                 {
 
-                    var getother = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var getother = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
 
                     if (getother.Count() != 0)
                     {
@@ -263,11 +263,11 @@ namespace Lockthreat.Countries
             var getalluser = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == "user type");
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == "user type");
                 if (getcheckId != null)
                 {
 
-                    var getother = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var getother = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
 
                     if (getother.Count() != 0)
                     {
@@ -287,11 +287,11 @@ namespace Lockthreat.Countries
             var getAllGoal  = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == "strategic goal");
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == "strategic goal");
                 if (getcheckId != null)
                 {
 
-                    var getgoal  = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var getgoal  = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (getgoal.Count() != 0)
                     {
                         getAllGoal = ObjectMapper.Map<List<GetDynamicValueDto>>(getgoal);
@@ -311,11 +311,11 @@ namespace Lockthreat.Countries
             var getAllStrategicType   = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() =="strategic type");
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() =="strategic type");
                 if (getcheckId != null)
                 {
 
-                    var getStrategicType = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var getStrategicType = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
 
                     if (getStrategicType.Count() != 0)
                     {
@@ -335,11 +335,11 @@ namespace Lockthreat.Countries
             var getAllStrategicStatus  = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == "strategic status");
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == "strategic status");
                 if (getcheckId != null)
                 {
 
-                    var getStrategicStatus  = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var getStrategicStatus  = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
 
                     if (getStrategicStatus.Count() != 0)
                     {
@@ -359,11 +359,11 @@ namespace Lockthreat.Countries
             var getAllStrategicStatus = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == "risk group");
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == "risk group");
                 if (getcheckId != null)
                 {
 
-                    var getStrategicStatus = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var getStrategicStatus = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
 
                     if (getStrategicStatus.Count() != 0)
                     {
@@ -383,11 +383,11 @@ namespace Lockthreat.Countries
             var getAllKeyRiskStatus  = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == "status");
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == "status");
                 if (getcheckId != null)
                 {
 
-                    var getKeyRiskStatus  = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var getKeyRiskStatus  = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (getKeyRiskStatus.Count() != 0)
                     {
                         getAllKeyRiskStatus = ObjectMapper.Map<List<GetDynamicValueDto>>(getKeyRiskStatus);
@@ -406,11 +406,11 @@ namespace Lockthreat.Countries
             var frequencys  = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == "frequency");
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == "frequency");
                 if (getcheckId != null)
                 {
 
-                    var frequency = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var frequency = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (frequency.Count() != 0)
                     {
                         frequencys = ObjectMapper.Map<List<GetDynamicValueDto>>(frequency);
@@ -429,11 +429,11 @@ namespace Lockthreat.Countries
             var frequencys = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == "process type");
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == "process type");
                 if (getcheckId != null)
                 {
 
-                    var frequency = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var frequency = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (frequency.Count() != 0)
                     {
                         frequencys = ObjectMapper.Map<List<GetDynamicValueDto>>(frequency);
@@ -452,11 +452,11 @@ namespace Lockthreat.Countries
             var frequencys = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == "sla");
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == "sla");
                 if (getcheckId != null)
                 {
 
-                    var frequency = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var frequency = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (frequency.Count() != 0)
                     {
                         frequencys = ObjectMapper.Map<List<GetDynamicValueDto>>(frequency);
@@ -475,11 +475,11 @@ namespace Lockthreat.Countries
             var frequencys = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == "riview period");
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == "riview period");
                 if (getcheckId != null)
                 {
 
-                    var frequency = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var frequency = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (frequency.Count() != 0)
                     {
                         frequencys = ObjectMapper.Map<List<GetDynamicValueDto>>(frequency);
@@ -498,11 +498,11 @@ namespace Lockthreat.Countries
             var frequencys = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == "process status");
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == "process status");
                 if (getcheckId != null)
                 {
 
-                    var frequency = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var frequency = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (frequency.Count() != 0)
                     {
                         frequencys = ObjectMapper.Map<List<GetDynamicValueDto>>(frequency);
@@ -521,11 +521,11 @@ namespace Lockthreat.Countries
             var frequencys = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == "activity");
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == "activity");
                 if (getcheckId != null)
                 {
 
-                    var frequency = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var frequency = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (frequency.Count() != 0)
                     {
                         frequencys = ObjectMapper.Map<List<GetDynamicValueDto>>(frequency);
@@ -545,11 +545,11 @@ namespace Lockthreat.Countries
                 var frequencys = new List<GetDynamicValueDto>();
                 try
                 {
-                    var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == "process priority");
+                    var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == "process priority");
                     if (getcheckId != null)
                     {
 
-                        var frequency = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                        var frequency = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                         if (frequency.Count() != 0)
                         {
                             frequencys = ObjectMapper.Map<List<GetDynamicValueDto>>(frequency);
@@ -568,11 +568,11 @@ namespace Lockthreat.Countries
             var meetingtype  = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == ("Meeting Type").ToLower().Trim());
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == ("Meeting Type").ToLower().Trim());
                 if (getcheckId != null)
                 {
 
-                    var meetingTypes  = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var meetingTypes  = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (meetingTypes.Count() != 0)
                     {
                         meetingtype = ObjectMapper.Map<List<GetDynamicValueDto>>(meetingTypes);
@@ -591,11 +591,11 @@ namespace Lockthreat.Countries
             var meetingClassifications  = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == ("Meeting Classification").ToLower().Trim());
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == ("Meeting Classification").ToLower().Trim());
                 if (getcheckId != null)
                 {
 
-                    var meetingClassification = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var meetingClassification = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (meetingClassification.Count() != 0)
                     {
                         meetingClassifications = ObjectMapper.Map<List<GetDynamicValueDto>>(meetingClassification);
@@ -614,11 +614,11 @@ namespace Lockthreat.Countries
             var meetingClassifications = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == ("Risk Level").ToLower().Trim());
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == ("Risk Level").ToLower().Trim());
                 if (getcheckId != null)
                 {
 
-                    var meetingClassification = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var meetingClassification = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (meetingClassification.Count() != 0)
                     {
                         meetingClassifications = ObjectMapper.Map<List<GetDynamicValueDto>>(meetingClassification);
@@ -637,11 +637,11 @@ namespace Lockthreat.Countries
             var meetingClassifications = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == ("Task Link To").ToLower().Trim());
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == ("Task Link To").ToLower().Trim());
                 if (getcheckId != null)
                 {
 
-                    var meetingClassification = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var meetingClassification = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (meetingClassification.Count() != 0)
                     {
                         meetingClassifications = ObjectMapper.Map<List<GetDynamicValueDto>>(meetingClassification);
@@ -660,11 +660,11 @@ namespace Lockthreat.Countries
             var meetingClassifications = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == ("Task Type").ToLower().Trim());
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == ("Task Type").ToLower().Trim());
                 if (getcheckId != null)
                 {
 
-                    var meetingClassification = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var meetingClassification = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (meetingClassification.Count() != 0)
                     {
                         meetingClassifications = ObjectMapper.Map<List<GetDynamicValueDto>>(meetingClassification);
@@ -683,11 +683,11 @@ namespace Lockthreat.Countries
             var meetingClassifications = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == ("Facility Type").ToLower().Trim());
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == ("Facility Type").ToLower().Trim());
                 if (getcheckId != null)
                 {
 
-                    var meetingClassification = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var meetingClassification = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (meetingClassification.Count() != 0)
                     {
                         meetingClassifications = ObjectMapper.Map<List<GetDynamicValueDto>>(meetingClassification);
@@ -706,11 +706,11 @@ namespace Lockthreat.Countries
             var meetingClassifications = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == ("Asset Type").ToLower().Trim());
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == ("Asset Type").ToLower().Trim());
                 if (getcheckId != null)
                 {
 
-                    var meetingClassification = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var meetingClassification = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (meetingClassification.Count() != 0)
                     {
                         meetingClassifications = ObjectMapper.Map<List<GetDynamicValueDto>>(meetingClassification);
@@ -729,11 +729,11 @@ namespace Lockthreat.Countries
             var meetingClassifications = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == ("Asset Category").ToLower().Trim());
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == ("Asset Category").ToLower().Trim());
                 if (getcheckId != null)
                 {
 
-                    var meetingClassification = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var meetingClassification = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (meetingClassification.Count() != 0)
                     {
                         meetingClassifications = ObjectMapper.Map<List<GetDynamicValueDto>>(meetingClassification);
@@ -752,10 +752,10 @@ namespace Lockthreat.Countries
             var meetingClassifications = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == ("Asset Label").ToLower().Trim());
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == ("Asset Label").ToLower().Trim());
                 if (getcheckId != null)
                 {
-                    var meetingClassification = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var meetingClassification = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (meetingClassification.Count() != 0)
                     {
                         meetingClassifications = ObjectMapper.Map<List<GetDynamicValueDto>>(meetingClassification);
@@ -774,10 +774,10 @@ namespace Lockthreat.Countries
             var meetingClassifications = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == ("Fiscal Year").ToLower().Trim());
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == ("Fiscal Year").ToLower().Trim());
                 if (getcheckId != null)
                 {
-                    var meetingClassification = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var meetingClassification = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (meetingClassification.Count() != 0)
                     {
                         meetingClassifications = ObjectMapper.Map<List<GetDynamicValueDto>>(meetingClassification);
@@ -796,10 +796,10 @@ namespace Lockthreat.Countries
             var meetingClassifications = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == ("Audit Area").ToLower().Trim());
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == ("Audit Area").ToLower().Trim());
                 if (getcheckId != null)
                 {
-                    var meetingClassification = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var meetingClassification = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (meetingClassification.Count() != 0)
                     {
                         meetingClassifications = ObjectMapper.Map<List<GetDynamicValueDto>>(meetingClassification);
@@ -818,10 +818,10 @@ namespace Lockthreat.Countries
             var meetingClassifications = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == ("Type").ToLower().Trim());
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == ("Type").ToLower().Trim());
                 if (getcheckId != null)
                 {
-                    var meetingClassification = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var meetingClassification = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (meetingClassification.Count() != 0)
                     {
                         meetingClassifications = ObjectMapper.Map<List<GetDynamicValueDto>>(meetingClassification);
@@ -840,10 +840,10 @@ namespace Lockthreat.Countries
             var meetingClassifications = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == ("Review Status").ToLower().Trim());
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == ("Review Status").ToLower().Trim());
                 if (getcheckId != null)
                 {
-                    var meetingClassification = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var meetingClassification = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (meetingClassification.Count() != 0)
                     {
                         meetingClassifications = ObjectMapper.Map<List<GetDynamicValueDto>>(meetingClassification);
@@ -876,10 +876,10 @@ namespace Lockthreat.Countries
             var vendorTypes = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == ("Vendor Type").ToLower().Trim());
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == ("Vendor Type").ToLower().Trim());
                 if (getcheckId != null)
                 {
-                    var vendorType  = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var vendorType  = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (vendorType.Count() != 0)
                     {
                         vendorTypes = ObjectMapper.Map<List<GetDynamicValueDto>>(vendorType);
@@ -899,10 +899,10 @@ namespace Lockthreat.Countries
             var vendorTypes = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == ("Industry").ToLower().Trim());
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == ("Industry").ToLower().Trim());
                 if (getcheckId != null)
                 {
-                    var vendorType = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var vendorType = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (vendorType.Count() != 0)
                     {
                         vendorTypes = ObjectMapper.Map<List<GetDynamicValueDto>>(vendorType);
@@ -922,10 +922,10 @@ namespace Lockthreat.Countries
             var ProductTypes  = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == ("Product Type").ToLower().Trim());
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == ("Product Type").ToLower().Trim());
                 if (getcheckId != null)
                 {
-                    var ProductType  = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var ProductType  = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (ProductType.Count() != 0)
                     {
                         ProductTypes = ObjectMapper.Map<List<GetDynamicValueDto>>(ProductType);
@@ -945,10 +945,10 @@ namespace Lockthreat.Countries
             var ProductTypes = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == ("Contact Type").ToLower().Trim());
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == ("Contact Type").ToLower().Trim());
                 if (getcheckId != null)
                 {
-                    var ProductType = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var ProductType = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (ProductType.Count() != 0)
                     {
                         ProductTypes = ObjectMapper.Map<List<GetDynamicValueDto>>(ProductType);
@@ -968,10 +968,10 @@ namespace Lockthreat.Countries
             var ProductTypes = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == ("Contract Type").ToLower().Trim());
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == ("Contract Type").ToLower().Trim());
                 if (getcheckId != null)
                 {
-                    var ProductType = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var ProductType = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (ProductType.Count() != 0)
                     {
                         ProductTypes = ObjectMapper.Map<List<GetDynamicValueDto>>(ProductType);
@@ -990,10 +990,10 @@ namespace Lockthreat.Countries
             var ProductTypes = new List<GetDynamicValueDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == ("Contract Category").ToLower().Trim());
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == ("Contract Category").ToLower().Trim());
                 if (getcheckId != null)
                 {
-                    var ProductType = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicParameterId == getcheckId.Id).ToListAsync();
+                    var ProductType = await _DynamicParameterValueRepository.GetAll().Where(l => l.DynamicPropertyId == getcheckId.Id).ToListAsync();
                     if (ProductType.Count() != 0)
                     {
                         ProductTypes = ObjectMapper.Map<List<GetDynamicValueDto>>(ProductType);

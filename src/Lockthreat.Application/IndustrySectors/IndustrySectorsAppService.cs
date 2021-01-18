@@ -1,5 +1,5 @@
 ﻿using Abp.Domain.Repositories;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.IndustrySectors.Dto;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -14,12 +14,12 @@ namespace Lockthreat.IndustrySectors
 
     public class IndustrySectorsAppService : IIndustrySectorAppService
     {
-        private readonly IRepository<DynamicParameterValue> _DynamicParameterValueRepository;
-        private readonly IRepository<DynamicParameter> _dynamicParameterManager;
+        private readonly IRepository<DynamicPropertyValue> _DynamicParameterValueRepository;
+        private readonly IRepository<DynamicProperty> _dynamicParameterManager;
 
         public IndustrySectorsAppService(
-          IRepository<DynamicParameterValue> DynamicParameterValueRepository, 
-          IRepository<DynamicParameter> dynamicParameterManager
+          IRepository<DynamicPropertyValue> DynamicParameterValueRepository, 
+          IRepository<DynamicProperty> dynamicParameterManager
           )
         {
             _DynamicParameterValueRepository = DynamicParameterValueRepository;
@@ -30,11 +30,11 @@ namespace Lockthreat.IndustrySectors
             var getIndustrySector = new List<IndustrySectorDto>();
             try
             {
-                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.ParameterName.ToLower().Trim() == "industry sector");
+                var getcheckId = _dynamicParameterManager.FirstOrDefault(x => x.PropertyName.ToLower().Trim() == "industry sector");
                 if (getcheckId != null)
                 {
                      getIndustrySector = await _DynamicParameterValueRepository.GetAll()
-                        .Where(l => l.DynamicParameterId == getcheckId.Id)
+                        .Where(l => l.DynamicPropertyId == getcheckId.Id)
                          .Select(x => new IndustrySectorDto()
                          {
                              Id = x.Id,

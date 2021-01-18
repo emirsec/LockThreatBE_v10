@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.BusinessEntities;
 using Lockthreat.Employees;
 using Lockthreat.FacilitiesDatacenters;
@@ -22,13 +22,13 @@ namespace Lockthreat.FacilitieDatacenters
         public string FacilityAddressTwo { get; set; }
 
         public int? FacilityTypeId  { get; set; }
-        public DynamicParameterValue FacilityType { get; set; }
+        public DynamicPropertyValue FacilityType { get; set; }
         public string State { get; set; }
 
         public string City { get; set; }
         public string  PostalCode { get; set; }
         public int? CountryId { get; set; }
-        public DynamicParameterValue Country { get; set; }
+        public DynamicPropertyValue Country { get; set; }
         public long? EmployeeId { get; set; }
         public Employee Employee { get; set; }
         public long? LockThreatOrganizationId  { get; set; }
@@ -40,13 +40,13 @@ namespace Lockthreat.FacilitieDatacenters
         public BusinessUnit BusinessUnitGaurdian  { get; set; }
 
         public int? ConfidentialityId { get; set; }
-        public DynamicParameterValue Confidentiality { get; set; }
+        public DynamicPropertyValue Confidentiality { get; set; }
         public int? IntegrityId { get; set; }
-        public DynamicParameterValue Integrity { get; set; }
+        public DynamicPropertyValue Integrity { get; set; }
         public int? AvailibilityId { get; set; }
-        public DynamicParameterValue Availibility  { get; set; }
+        public DynamicPropertyValue Availibility  { get; set; }
         public int? OthersId { get; set; }
-        public DynamicParameterValue Others  { get; set; }
+        public DynamicPropertyValue Others  { get; set; }
         public ICollection<FacilitieDatacenterITService> SelectedFacilitieDatacenterITServices  { get; set; }
         public ICollection<FacilitieDatacenterProcess> SelectedFacilitieDatacenterProcess  { get; set; }
         public ICollection<FacilitieDatacenterService> SelectedFacilitieDatacenterServices  { get; set; }

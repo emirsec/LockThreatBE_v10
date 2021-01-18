@@ -1,6 +1,6 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.Domain.Repositories;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Abp.Extensions;
 using Abp.Linq.Extensions;
 using Lockthreat.AuthoratativeDocuments;

@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -24,19 +24,19 @@ namespace Lockthreat.Questions
         public string QuestionTitle  { get; set; }
 
         public int? SectionId  { get; set; }
-        public DynamicParameterValue Section  { get; set; }
+        public DynamicPropertyValue Section  { get; set; }
 
         public int? QuestionAreaId  { get; set; }
-        public DynamicParameterValue QuestionArea { get; set; }
+        public DynamicPropertyValue QuestionArea { get; set; }
 
         public int? QuestionCategoryId  { get; set; }
-        public DynamicParameterValue QuestionCategory { get; set; }
+        public DynamicPropertyValue QuestionCategory { get; set; }
 
         public int? QuestionStatusId  { get; set; }
-        public DynamicParameterValue QuestionStatus  { get; set; }
+        public DynamicPropertyValue QuestionStatus  { get; set; }
 
         public int? AnswerTypeId  { get; set; }
-        public DynamicParameterValue AnswerType { get; set; }
+        public DynamicPropertyValue AnswerType { get; set; }
 
         public bool AnswerTypes { get; set; }
 

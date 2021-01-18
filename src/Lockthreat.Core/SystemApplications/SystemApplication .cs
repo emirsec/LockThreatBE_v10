@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.BusinessEntities;
 using Lockthreat.Employees;
 using Lockthreat.OrganizationSetups;
@@ -28,7 +28,7 @@ namespace Lockthreat.SystemApplications
         public string PostalCode { get; set; }
 
         public int? CountryId { get; set; }
-        public DynamicParameterValue Country { get; set; }
+        public DynamicPropertyValue Country { get; set; }
 
          public long? LockThreatOrganizationId  { get; set; }
         public LockThreatOrganization LockThreatOrganization { get; set; }
@@ -44,13 +44,13 @@ namespace Lockthreat.SystemApplications
         public Employee BusinessOwner { get; set; }
 
         public int? ConfidentialityId  { get; set; }
-        public DynamicParameterValue Confidentiality { get; set; }
+        public DynamicPropertyValue Confidentiality { get; set; }
         public int? AvailibilityId  { get; set; }
-        public DynamicParameterValue Availibility  { get; set; }
+        public DynamicPropertyValue Availibility  { get; set; }
         public int? IntegrityId  { get; set; }
-        public DynamicParameterValue Integrity { get; set; }
+        public DynamicPropertyValue Integrity { get; set; }
         public int? OthersId  { get; set; }
-        public DynamicParameterValue Others  { get; set; }
+        public DynamicPropertyValue Others  { get; set; }
         
         public ICollection<SysteamApplicationITservice> SelectedSysteamApplicationITservices  { get; set; }
         public ICollection<SysteamApplicationBusinessProcess> SelectedSysteamApplicationBusinessProcess { get; set; }

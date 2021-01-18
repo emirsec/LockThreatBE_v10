@@ -1,4 +1,4 @@
-﻿using Abp.DynamicEntityParameters;
+﻿using Abp.DynamicEntityProperties;
 using Lockthreat.BusinessEntities;
 using System;
 using System.Collections.Generic;
@@ -16,7 +16,7 @@ namespace Lockthreat.Business.Dto
         public bool IsAuditableEntity { get; set; }
         public int? UnitTypeId { get; set; }
 
-       // public DynamicParameterValue UnitType { get; set; }
+       // public DynamicEntityProperty UnitType { get; set; }
       //  public UnitType UnitType { get; set; }
         public int? ParentUnit { get; set; }
         public virtual long? OrganizationUnitId { get; set; }

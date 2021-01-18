@@ -1,7 +1,7 @@
 ﻿using Abp.Domain.Entities.Auditing;
 using Lockthreat.AuthoratativeDocument.Dto;
 using Lockthreat.Countries.Dto;
-using Lockthreat.DynamicEntityParameters.Dto;
+using Lockthreat.DynamicEntityProperties.Dto;
 using Lockthreat.Employee.Dto;
 using Lockthreat.GRCPrograms.Dto;
 using Lockthreat.OrganizationSetup.Dto;

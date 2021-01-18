@@ -1,5 +1,5 @@
 ﻿using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,6 +12,6 @@ namespace Lockthreat.Projects
         public Project Project { get; set; }
 
         public int? ProjectComponentsId   { get; set; }
-        public DynamicParameterValue ProjectComponents  { get; set; }
+        public DynamicPropertyValue ProjectComponents  { get; set; }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using Abp.Application.Services.Dto;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.BusinessServices.Dto;
 using System;
 using System.Collections.Generic;
@@ -15,14 +15,14 @@ namespace Lockthreat.Findings.Dto
         public string FindingDetails { get; set; }
         public DateTime? DateCreated { get; set; }
         public int? CategoryId { get; set; }
-        public DynamicParameterValue Category { get; set; }
+        public DynamicEntityProperty Category { get; set; }
         public string CategoryOther { get; set; }
         public int? FindingStatusId { get; set; }
-        public DynamicParameterValue FindingStatus { get; set; }
+        public DynamicEntityProperty FindingStatus { get; set; }
         public int? RankingId { get; set; }
-        public DynamicParameterValue Ranking { get; set; }
+        public DynamicEntityProperty Ranking { get; set; }
         public int? ClassificationId { get; set; }
-        public DynamicParameterValue Classification { get; set; }
+        public DynamicEntityProperty Classification { get; set; }
         public long? FindingManagerId { get; set; }
         public BusinessServiceOwner  FindingManager { get; set; }
         public long? FindingCoordinatorId { get; set; }
@@ -34,11 +34,11 @@ namespace Lockthreat.Findings.Dto
         public string Condition { get; set; }
         public string Consequence { get; set; }
         public int? ActionId { get; set; }
-        public DynamicParameterValue Action { get; set; }
+        public DynamicEntityProperty Action { get; set; }
         public long? ReviewedId { get; set; }
         public BusinessServiceOwner Reviewed { get; set; }
         public int? ResponseId { get; set; }
-        public DynamicParameterValue Response { get; set; }
+        public DynamicEntityProperty Response { get; set; }
         public int? PotentialCost { get; set; }
         public long? AssignedId { get; set; }
         public BusinessServiceOwner Assigned { get; set; }

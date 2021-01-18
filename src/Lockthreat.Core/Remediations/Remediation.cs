@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.Employees;
 using Lockthreat.RiskManagements;
 using System;
@@ -22,20 +22,20 @@ namespace Lockthreat.Remediations
         public int? EstimatedCost { get; set; }
 
         public int? PriorityId  { get; set; }
-        public DynamicParameterValue Priority { get; set; }
+        public DynamicPropertyValue Priority { get; set; }
 
         public DateTime? StartDate { get; set; }
         
         public DateTime? CompletionDate { get; set; }
 
         public int? TreatmentActionId  { get; set; }
-        public DynamicParameterValue TreatmentAction  { get; set; }
+        public DynamicPropertyValue TreatmentAction  { get; set; }
 
         public int? RemediationsTypeId  { get; set; }
-        public DynamicParameterValue RemediationsType  { get; set; }
+        public DynamicPropertyValue RemediationsType  { get; set; }
 
         public int? SubmissionStatusId  { get; set; }
-        public DynamicParameterValue SubmissionStatus  { get; set; }
+        public DynamicPropertyValue SubmissionStatus  { get; set; }
 
         public long? PlanOwnerId  { get; set; }
         public Employee PlanOwner { get; set; }
@@ -44,7 +44,7 @@ namespace Lockthreat.Remediations
         public Employee PlanManager{ get; set; }
 
         public int? PlanStatusId  { get; set; }
-        public DynamicParameterValue PlanStatus { get; set; }
+        public DynamicPropertyValue PlanStatus { get; set; }
         
         public int? MitigationCost { get; set; }
         public string RemediationActivity { get; set; }

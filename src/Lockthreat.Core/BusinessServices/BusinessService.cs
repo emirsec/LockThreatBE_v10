@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Lockthreat.BusinessEntities;
 using Lockthreat.Employees;
 using Lockthreat.ITServices;
@@ -35,19 +35,19 @@ namespace Lockthreat.BusinessServices
 
 
         public int? ServiceTypeId  { get; set; }
-        public DynamicParameterValue ServiceType { get; set; }
+        public DynamicPropertyValue ServiceType { get; set; }
 
         public int? ConfidentialityId { get; set; }
-        public DynamicParameterValue Confidentiality  { get; set; }
+        public DynamicPropertyValue Confidentiality  { get; set; }
 
         public int? IntergrityId { get; set; }
-        public DynamicParameterValue Intergrity { get; set; }
+        public DynamicPropertyValue Intergrity { get; set; }
 
         public int? OthersId { get; set; }
-        public DynamicParameterValue Others { get; set; }
+        public DynamicPropertyValue Others { get; set; }
 
         public int? AvailibilityId  { get; set; }
-        public DynamicParameterValue Availibility { get; set; }
+        public DynamicPropertyValue Availibility { get; set; }
 
         public ICollection<ITServiceBusinessService> SelectedItServices  { get; set; }
         public ICollection<BusinessServiceUnit> SelectdBusinessUnits  { get; set; }

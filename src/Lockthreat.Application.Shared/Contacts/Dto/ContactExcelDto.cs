@@ -1,4 +1,4 @@
-﻿using Abp.DynamicEntityParameters;
+﻿using Abp.DynamicEntityProperties;
 using Lockthreat.BusinessServices.Dto;
 using Lockthreat.OrganizationSetup.Dto;
 using System;
@@ -12,7 +12,7 @@ namespace Lockthreat.Contacts.Dto
         public int? TenantId { get; set; }
         public string ContactId { get; set; }
         public int? ContactTypeId { get; set; }
-        public DynamicParameterValue ContactType { get; set; }
+        public DynamicEntityProperty ContactType { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string jobTitle { get; set; }
@@ -25,7 +25,7 @@ namespace Lockthreat.Contacts.Dto
         public string City { get; set; }
         public string PostalCode { get; set; }
         public int? CountryId { get; set; }
-        public DynamicParameterValue Country { get; set; }
+        public DynamicEntityProperty Country { get; set; }
         public long? LoginUserId { get; set; }
         public BusinessServiceOwner LoginUser { get; set; }
         public long? LockThreatOrganizationId { get; set; }

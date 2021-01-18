@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using Abp.DynamicEntityParameters;
+using Abp.DynamicEntityProperties;
 using Abp.Organizations;
 using Lockthreat.Employees;
 using Lockthreat.OrganizationSetups;
@@ -26,7 +26,7 @@ namespace Lockthreat.BusinessEntities
         public bool IsAuditableEntity { get; set; }
 
         public int? UnitTypeId  { get; set; }
-        public DynamicParameterValue UnitType  { get; set; }
+        public DynamicPropertyValue UnitType  { get; set; }
 
         public int? ParentUnit { get; set; }
 
