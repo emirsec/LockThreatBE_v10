@@ -11,12 +11,16 @@ using Lockthreat.MultiTenancy;
 using Lockthreat.MultiTenancy.Accounting;
 using Lockthreat.MultiTenancy.Payments;
 using Lockthreat.Storage;
+using Lockthreat.OrganizationSetups;
 
 namespace Lockthreat.EntityFrameworkCore
 {
     public class LockthreatDbContext : AbpZeroDbContext<Tenant, Role, User, LockthreatDbContext>, IAbpPersistedGrantDbContext
     {
         /* Define an IDbSet for each entity of the application */
+
+        public virtual DbSet<LockThreatOrganization> LockThreatOrganizations { get; set; }
+
 
         public virtual DbSet<BinaryObject> BinaryObjects { get; set; }
 
